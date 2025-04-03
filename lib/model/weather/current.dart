@@ -20,7 +20,6 @@ class Current {
   });
 
   factory Current.fromJson(Map<String, dynamic> json) {
-    // print("data before return constructor $json");
   return Current(
         dt: json['dt'] as int?,
         temp: (json['temp'] as num?)?.toDouble(),
@@ -32,35 +31,6 @@ class Current {
         weather: (json['weather'] as List<dynamic>?),
       );
   }
-
-  Map<String, dynamic> toJson() => {
-        'dt': dt,
-        'temp': temp,
-        'humidity': humidity,
-        'clouds': clouds,
-        'visibility': visibility,
-        'wind_speed': windSpeed,
-        'wind_deg': windDeg,
-        'weather': weather?.map((e) => e.toJson()).toList(),
-      };
 }
 
 
-// class weather{
-//   // "id": 804,
-//   //       "main": "Clouds",
-//   //       "description": "overcast clouds",
-//   //       "icon": "04d"
-//   String? main;
-//   String? description;
-//   String? icon;
-//   weather({this.description,this.icon,this.main});
-//   factory weather.fromJson(List data_list) {
-//     // print("data before return constructor $json");
-//   return weather(
-//        main : data_list[0]['main'],
-//        description : data_list[0]['description'],
-//        icon: data_list[0]['icon']
-//       );
-//   }
-// }

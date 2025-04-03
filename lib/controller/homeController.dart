@@ -4,17 +4,21 @@ import 'package:get/get.dart';
 import 'package:weather_app/Service_API/http_service.dart';
 import 'package:weather_app/controller/currentController.dart';
 import 'package:weather_app/geolocator/geolocate.dart';
-import 'package:weather_app/model/weather/current.dart';
 import 'package:intl/intl.dart';
 //import 'package:geocoding/geocoding.dart';
 
 class HomeController extends GetxController {
+  // define this variable to initialize search controller when we use it  later in ui
   TextEditingController searchController = TextEditingController();
+  //define this variable to initialize service to use it when we work with api
   HttpService service = Get.put(HttpService());
+  //define this variable to get time zone  of the place
   CurrentController currentController = Get.put(CurrentController());
-  Current current = Get.put(Current());
+  // define this variable to get location of current place
   RxString currentLocation = ''.obs;
-  RxString DataToday = ''.obs;
+  //define variable to get date 
+  RxString DateToday = ''.obs;
+  //define this variables to check if we get data and if the user search for some place
   RxBool data_found = false.obs;
   RxBool data_seach_found = false.obs;
   RxBool is_loading = false.obs;
@@ -27,13 +31,13 @@ class HomeController extends GetxController {
     is_loading = false.obs;
     DateTime now = DateTime.now();
     var formatter = DateFormat('yyyy-MM-dd');
-    DataToday.value = formatter.format(now);
+    DateToday.value = formatter.format(now);
     currentLocation.value =
         currentController.timezone!.toString().replaceFirst(RegExp(r'/'), ',');
     GetStarted();
     super.onInit();
   }
-//function work when user clik to search icon 
+//function work when user click to search icon 
   void Search() {
     if (searchController.text.isNotEmpty) {
       is_loading.value= true;

@@ -2,12 +2,16 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
 class geolocator extends GetxController {
+  //variables to get latitude and longitude of place
   final RxDouble _latitude = 0.0.obs;
   final RxDouble _longitude = 0.0.obs;
+  //variable to check if data is ready or not
   final RxBool _isloading = true.obs;
+  //function to get private latitude and longitude and is_loading variables data 
   RxDouble getlatitude() => _latitude;
   RxDouble getlongitude() => _longitude;
   RxBool getisloading() => _isloading;
+  //function of live circle of application ,when page is start check if data is ready and also get position of place
   @override
   void onInit() {
     if (_isloading.value) {
@@ -15,7 +19,7 @@ class geolocator extends GetxController {
     }
     super.onInit();
   }
-
+  //function to get latitude and longitude from location service
   Future<void> determinePosition() async {
     bool serviceEnabled;
     LocationPermission permission;

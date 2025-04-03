@@ -37,14 +37,4 @@ class Weather {
             .toList(),
       );
   }
-
-  Map<String, dynamic> toJson() => {
-        'lat': lat,
-        'lon': lon,
-        'timezone': timezone,
-        'timezone_offset': timezoneOffset,
-        'current': current?.toJson(),
-        'hourly': hourly?.map((e) => e.toJson()).toList(),
-        'daily':daily?.map((e) => e.toJson()).toList(),
-      };
-}
+ }

@@ -9,11 +9,15 @@ import 'package:weather_app/geolocator/geolocate.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/model/weather/weather.dart';
 class HttpService extends GetxController{
+  //variable to get weather data of any place and store it here
   final Rx<Weather?> weatherData = Rx<Weather?>(null);
-  final homeController = Get.lazyPut(()=>HomeController);
+  //variable to get weather data of any place of this time and store it here
   final currentController =  Get.put(CurrentController());
+  //variable to get weather data of any place of 12 hour of that day and store it here
   final hourlyController = Get.put(Hourlycontroller());
+  //variable to get weather data of any place of other 7 days and store it here
   final dailyController = Get.put(Dailycontroller());
+  //define this variable to get data and convert it from json 
   Map<String,dynamic> dataresponse = {};
   // start the request and get the response
   void requestdata()async{

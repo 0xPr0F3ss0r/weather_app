@@ -25,10 +25,4 @@ class Daily {
       clouds: json['clouds'],
     );
   }
-  Map<String,dynamic> toJson() => {
-    'dt':dt,
-    'tempday':tempday,
-    'humidity':humidity,
-    'weather':weather?.map((e) => e.toJson()).toList(),
-  };
 }

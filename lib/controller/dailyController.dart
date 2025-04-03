@@ -3,7 +3,9 @@ import 'package:intl/intl.dart';
 import 'package:weather_app/model/weather/daily.dart';
 
 class Dailycontroller extends GetxController{
+  //define variable to get data when it changed in real time
   final Rx<List<Daily?>?> daily = Rx<List<Daily?>?>(null);
+  //define variable to get temp of wind speed and humidity and clouds and put them is this list
   RxList<dynamic> weatherValues = [].obs;
    //get day name from dt that has type int
    String date(int dt){

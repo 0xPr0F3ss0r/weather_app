@@ -187,7 +187,7 @@ class HomePage extends StatelessWidget {
                                               Obx(
                                                 () => Text(
                                                   textAlign: TextAlign.center,
-                                                  controller.DataToday.value,
+                                                  controller.DateToday.value,
                                                   style: const TextStyle(
                                                       color: Colors.white24,
                                                       fontSize: 18),

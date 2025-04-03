@@ -31,16 +31,4 @@ class Hourly {
         windGust: (json['wind_gust'] as num?)?.toDouble(),
         weather: (json['weather'] as List<dynamic>?)
       );
-
-  Map<String, dynamic> toJson() => {
-        'dt': dt,
-        'temp': temp,
-        'humidity': humidity,
-        'clouds': clouds,
-        'visibility': visibility,
-        'wind_speed': windSpeed,
-        'wind_deg': windDeg,
-        'wind_gust': windGust,
-        'weather': weather?.map((e) => e.toJson()).toList(),
-      };
 }
