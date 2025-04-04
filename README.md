@@ -18,7 +18,7 @@ A beautiful weather application built with Flutter that provides real-time weath
 <img src="https://raw.githubusercontent.com/0xPr0F3ss0r/weather_app/6b23cf4f3f35c90c72ea5299e72fbda56a540df8/photo_2025-04-03_07-08-11.jpg" width="300">
 
 ### 7-Day Forecast  
-<img src="https://raw.githubusercontent.com/0xPr0F3ss0r/weather_app/6b23cf4f3f35c90c72ea5299e72fbda56a540df8/photo_2025-04-03_07-08-11.jpg" width="300">
+<img src="https://github.com/0xPr0F3ss0r/weather_app/blob/a6d1d50571e57e3950157bafab167130f59725cd/photo_2025-04-03_07-07-50.jpg" width="300">
 
 ## 🚀 Installation
 
